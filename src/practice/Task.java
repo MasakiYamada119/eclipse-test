@@ -17,7 +17,7 @@ public class Task implements Comparable<Task> {
 		return this.date;
 	}
 	public String toString() {
-		return task;
+		return date + task;
 	}
 	@Override
 	public int compareTo(Task t) {
