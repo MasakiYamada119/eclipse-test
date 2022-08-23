@@ -20,7 +20,7 @@ public class Task implements Comparable<Task> {
 		return date + task;
 	}
 	@Override
-	public int compareTo(Task t) {
-		return date.compareTo(t.date);
+	public int compareTo(Task o) {
+		return date.compareTo(o.date);
 	}
 }

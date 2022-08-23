@@ -23,14 +23,14 @@ public class RPG {
 		monsters.add(slime);
 		monsters.add(oak);
 		monsters.add(dragon);
-	
-	    
+		
+		Human human = humans.get(Rand.get(humans.size()));
+		Monster monster = monsters.get(Rand.get(monsters.size()));
+	  
 	    while(true) {
 	    	System.out.println("人間のターン！");
-	    	Human human = humans.get(Rand.get(humans.size()));
-			Monster monster = monsters.get(Rand.get(monsters.size()));
 			human.attack(monster);
-			if(monster.hp <= 0) {
+			if (monster.hp <= 0) {
 				System.out.println(monster.name + "は倒れた。");
 				monsters.remove(monster);
 			}
@@ -41,7 +41,7 @@ public class RPG {
 			
 			System.out.println("モンスターのターン！");
 			monster.attack(human);
-			if(human.hp <= 0) {
+			if (human.hp <= 0) {
 				System.out.println(human.name + "は倒れた。");
 				humans.remove(human);
 			}
